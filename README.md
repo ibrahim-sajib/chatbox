@@ -44,8 +44,8 @@ chmod -R 775 storage
 
 ```
 
-# got to the dashboard page
-# you can login with this credentials after seed
+# Go to the dashboard page
+# You can login with this credentials after seed
 ```plaintext
  name = Test User
  email = test@example.com
