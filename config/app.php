@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\ServiceProvider;
+
 return [
 
     /*
@@ -94,6 +96,18 @@ return [
     | are secure. You should do this prior to deploying the application.
     |
     */
+    'providers' => ServiceProvider::defaultProviders()->merge([
+        /*
+         * Package Service Providers...
+         */
+
+        /*
+         * Application Service Providers...
+         */
+        App\Providers\AppServiceProvider::class,
+        App\Providers\RepositoryServiceProvider::class,
+    ])->toArray(),
+
 
     'cipher' => 'AES-256-CBC',
 

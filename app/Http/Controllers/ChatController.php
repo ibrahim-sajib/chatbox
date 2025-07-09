@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Contract\Repositories\ChatMessagesRepositoryInterface;
 use App\Events\MessageSent;
 use App\Http\Controllers\Controller;
 use App\Models\ChatMessages;
@@ -11,12 +12,9 @@ use Illuminate\Support\Facades\Auth;
 
 class ChatController extends Controller
 {
-    public function index(User $user)
+    public function index(User $user, ChatMessagesRepositoryInterface $chatMessagesRepository)
     {
-        $messages = ChatMessages::with(['sender', 'receiver'])
-            ->whereIn('sender_id', [Auth::id(), $user->id])
-            ->whereIn('receiver_id', [Auth::id(), $user->id])
-            ->get();
+        $messages = $chatMessagesRepository->getChatMessages($user);
         return response()->json($messages);
     }
 
