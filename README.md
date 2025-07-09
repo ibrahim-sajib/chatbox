@@ -1,56 +1,46 @@
 
 # chatbox
 
+```bash
 # clone the repo
-```
 git clone https://github.com/ibrahim-sajib/chatbox.git
-```
-# go to the chatbox
-```
+
+#go to the chatbox
 cd your_project_directory
-```
 
-# copy the .env.example content and make a .env file
-```
+#copy the .env.example content and make a .env file
+
 cp .env.example .env
-```
-# install composer
-```
+
+#install composer
 composer install
-```
-# install npm
-```
+
+#install npm
 npm install
-```
-# generate app key
-```
+
+#generate app key
 php artisan key:generate
-```
-# run this for starting the docker container
-```
+
+#run this for starting the docker container
 ./vendor/bin/sail up -d
-```
-# migrate and seed the data
-```
+
+#migrate and seed the data
 ./vendor/bin/sail artisan migrate:fresh --seed
-```
-# for the root permission run this command in the terminal of docker laravel.test container if necessary
-```
+
+#for the root permission run this command in the terminal of docker laravel.test container if necessary
 chown -R sail:sail storage
-```
-# run this
-```
+
+#run this
 npm run dev
-```
-# run this if faced permission issues for log file
 
-```
+#run this if faced permission issues for log file
 chmod -R 775 storage
-```
 
-# run this for running queue
-```
-./vendor/bin/sail artisan queue:listen
+
+#run this for running queue
+ ./vendor/bin/sail artisan queue:listen
+
+
 
 ```
 
