@@ -30,4 +30,13 @@ class ChatMessagesRepository extends BaseRepository implements ChatMessagesRepos
             ->whereIn('receiver_id', [Auth::id(), $user->id])
             ->get();
     }
+
+    public function storeChatMessage(User $user, array $payload)
+    {
+        return $this->model->create([
+            'sender_id' => Auth::id(),
+            'receiver_id' => $user->id,
+            'text' => $payload['message'],
+        ]);
+    }
 }
