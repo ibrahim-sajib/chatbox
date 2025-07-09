@@ -52,6 +52,6 @@ chmod -R 775 storage
  password = password
 ```
 
-# GNN Watermarking Project
+# one-to-one chat
 
 You can open two different browsers or check the feature via incognito mode, open the chatbox tab by selecting the user, and then start the real-time chatting.
