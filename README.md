@@ -36,6 +36,12 @@ npm run dev
 #run this if faced permission issues for log file
 chmod -R 775 storage
 
+#set this accordingly
+
+PUSHER_APP_ID=
+PUSHER_APP_KEY=
+PUSHER_APP_SECRET=
+PUSHER_APP_CLUSTER=
 
 #run this for running queue
  ./vendor/bin/sail artisan queue:listen
