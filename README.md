@@ -61,3 +61,17 @@ PUSHER_APP_CLUSTER=
 # one-to-one chat
 
 You can open two different browsers or check the feature via incognito mode, open the chatbox tab by selecting the user, and then start the real-time chatting.
+
+
+## 🚀 Features
+
+- 🔄 Real-time messaging via **Pusher**
+- 🎧 Message broadcasting with **Laravel Events & Listeners**
+- 🔐 Secure private channels based on user authentication
+- 🧩 **Repository Pattern** used for service abstraction
+- 🧰 RESTful APIs for sending and fetching messages
+- ⚡ Vue.js & Axios powered reactive chat UI
+- 🪄 Auto-scroll to the latest message
+- 🧪 Seeders for dummy users and messages
+- 📦 Docker-supported local development
+
